@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <title>Tailwind CSS</title>
+</head>
+
+<body>
+    <div class="bg-purple-900 text-white">
+        <p class="font-bold text-3xl">Font Sizing !!</p>
+    </div>
+    <p class="text-lg font-serif">Lorem ipsum dolor sit amet.</p>
+    <p class="text-lg font-mono">Lorem ipsum dolor sit amet.</p>
+    <p class="text-lg font-sans">Lorem ipsum dolor sit amet.</p>
+    <p class="text-lg tracking-tight">tracking-tight : Lorem ipsum dolor sit amet.</p>
+    <p class="text-lg tracking-tighter">tracking-tighter : Lorem ipsum dolor sit amet.</p>
+
+    <p class="font-bold text-3xl">Demerits of using space-x and sapce-y : i.e it won't get applied to the first element
+        so to solve that we h
+        ave to use an empty li at first place where ever the childs are placed or can solve it
+        using the margin !!</p>
+    <br>
+    <br>
+    <ul class="flex  bg-slate-700 text-white pb-2 justify-between">
+        <span class="flex space-x-1  space-y-2 ">
+            <li></li>
+            <li>hii</li>
+        </span>
+
+        <span class=" flex space-x-3  space-y-2 ">
+            <li></li>
+            <li class=" border-2 border-black rounded-xl p-1">Home</li>
+            <li class=" border-2 border-black rounded-xl p-1">About</li>
+            <li class=" border-2 border-black rounded-xl p-1">Contact</li>
+        </span>
+    </ul>
+    <span class="space-y-2 divide-x-2 ">
+        <ul>
+            <li></li>
+            <li class="border-2">Home</li>
+            <li class=" border-2">About</li>
+            <li class=" border-2">Contact</li>
+        </ul>
+    </span>
+
+    <h1>Responsive Designs : imp !! see notes </h1>
+    <div class="bg-red-600 sm:bg-yellow-600 lg:bg-gray-600 xl:bg-orange-700">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi vel architecto unde ratione dicta ipsum
+        dignissimos voluptates voluptate aliquam, maiores nobis vitae impedit explicabo accusamus rem praesentium
+        possimus corrupti. Dolor sequi animi numquam eligendi quia adipisci reiciendis fugit sint fugiat? Tempore
+        deleniti mollitia amet unde magnam quod odio eos sapiente.
+    </div>
+    <hr>
+    <div class=" mt-10 bg-red-600 sm:bg-yellow-600 lg:bg-gray-600 xl:bg-orange-700">
+        <h1>below 640px red will be applied !!</h1>
+        <hr>
+        <h1>after 640px yellow will be applied !!</h1>
+        <hr>
+
+        <h1>after 1024px gray will be applied !!</h1>
+        <hr>
+
+        <h1>after 1280px orange will be applied !!</h1>
+        <hr>
+    </div>
+
+    <hr>
+    <div class="hidden lg:bg-green-600 lg:block mt-6">
+        making text visible only after >= 1024 px
+    </div>
+
+    <button class="bg-yellow-500 text-gray-700 active:bg-red-800 active:text-white">click me</button>
+
+    <h1>Defining the hover on the breakpoints !!</h1>
+
+    <button class="hover:bg-yellow-600  bg-red-700 text-black sm:hover:bg-slate-500 ">click me here !!</button>
+
+    <h1>Grid concept :</h1>
+    <div class=" bg-slate-800 text-white mx-auto grid lg:grid-cols-4 sm:grid-cols-3 md:grid-cols-2 gap-5">
+        <div class="bg-red-600 border borer-2 row-span-2">1</div>
+        <div class="bg-red-600 border borer-2">2</div>
+        <div class="bg-red-600 border borer-2">3</div>
+        <div class="bg-red-600 border borer-2">4</div>
+        <div class="bg-red-600 border borer-2">5</div>
+        <div class="bg-red-600 border borer-2">6</div>
+
+    </div>
+    <div>
+        <h2>Second part below !!</h2>
+    </div>
+    <div class="grid grid-cols-3 grid-rows-8">
+        <div class="bg-green-600 border borer-2 row-span-2">1</div>
+        <div class="bg-green-600 border borer-2">2</div>
+        <div class="bg-green-600 border borer-2">3</div>
+        <div class="bg-green-600 border borer-2">4</div>
+        <div class="bg-green-600 border borer-2">5</div>
+        <div class="bg-green-600 border borer-2">6</div>
+    </div>
+
+    <h1>use this !!</h1>
+    <!-- <div class="grid grid-cols-3 grid-rows-4 border border-black">
+        <div class="bg-green-600  borer-2 row-span-2  border border-black">1</div>
+        <div class="bg-green-600  borer-2  border border-black">2</div>
+        <div class="bg-green-600 border borer-2 border-black">3</div>
+        <div class="grid grid-cols-3">
+            <div class="bg-green-600 border borer-2 border-black ">
+                4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum iure quas accusantium nobis saepe, rerum
+                tenetur aliquam, quae exercitationem non vel corporis impedit. Ea consequuntur quod similique maxime
+                fuga dignissimos nam, doloribus cupiditate provident at ad esse? Aut, reprehenderit! Reiciendis quia
+                recusandae inventore, veniam fuga esse accusantium sequi, sapiente ipsum expedita quod!
+            </div>
+            <div class="bg-green-600 border borer-2 border-black">5</div>
+            <div class="bg-green-600 border borer-2 border-black">6</div>
+        </div>
+    </div> -->
+    <!-- <div class="grid grid-cols-3 grid-rows-4 border border-black relative">
+        <div class="bg-green-600 border-2 row-span-2  border-black">1</div>
+        <div class="bg-green-600 border-2  border-black">2</div>
+        <div class="bg-green-600 border-2  border-black">3</div>
+      
+            <div class="bg-green-600 border-2  border-black relative" style="grid-row: 1 / span 3;">
+                4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum iure quas accusantium nobis saepe, rerum
+                tenetur al
+            </div>
+            <div class="bg-green-600 border-2  border-black">5</div>
+            <div class="bg-green-600 border-2  border-black">6</div>
+       
+        </div> -->
+    <div class="grid grid-cols-4 grid-rows-2 bg-slate-400 gap-3 ">
+        <div class=" border border-gray-500 rounded-lg bg-white row-span-2">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Deserunt voluptatibus illo itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white col-start-2 col-end-4">Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deserunt voluptatibus illo itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Deserunt voluptatibus illo itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Deserunt voluptatibus illo itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Deserunt voluptatibus illo itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white">hiLorem ipsum dolor sit amet consectetur adipisicing
+            elit. Deserunt voluptatibus illo itaque?</div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="grid grid-cols-4 grid-rows-6 bg-slate-400 gap-3   p-3">
+        <div class=" border border-gray-500 rounded-lg bg-white row-span-6  p-3">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Eligendi saepe, recusandae nam nesciunt error harum, amet vero illum tempora nihil omnis
+            veritatis tenetur. Quis iusto, quam a aspernatur itaque non dolorem temporibus, repellendus rerum
+            perspiciatis, sunt libero inventore nostrum obcaecati! Repellendus rerum ipsam porro beatae.</div>
+        <div class=" border border-gray-500 rounded-lg bg-white  row-span-3  col-start-2 col-end-4  p-3">Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Aut at accusamus quae reprehenderit itaque quis sequi deserunt
+            cum nemo est explicabo, animi quasi magni ducimus architecto veniam libero illum unde assumenda dolorum nam.
+            Ut aperiam culpa earum voluptatibus asperiores qui omnis aspernatur blanditiis, ducimus dolores minima
+            neque. In doloribus vero minima doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deserunt voluptatibus illo itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white row-span-3    p-3">Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Aut at accusamus quae reprehenderit itaque quis sequi deserunt cum nemo est
+            explicabo, animi quasi magni ducimus architecto veniam libero illum unde assumenda dolorum nam. Ut aperiam
+            culpa earum voluptatibus asperiores qui omnis aspernatur blanditiis, ducimus dolores minima neque. In
+            doloribus vero minima doloremque. 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            voluptatibus illo itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white  row-span-3   p-3">Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Aut at accusamus quae reprehenderit itaque quis sequi deserunt cum nemo est
+            explicabo, animi quasi magni ducimus architecto veniam libero illum unde assumenda dolorum nam. Ut aperiam
+            culpa earum voluptatibus asperiores qui omnis aspernatur blanditiis, ducimus dolores minima neque. In
+            doloribus vero minima doloremque. ye Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            voluptatibus illo itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white row-span-3  p-3">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut at accusamus quae reprehenderit itaque quis sequi deserunt cum nemo est explicabo,
+            animi quasi magni ducimus architecto veniam libero illum unde assumenda dolorum nam. Ut aperiam culpa earum
+            voluptatibus asperiores qui omnis aspernatur blanditiis, ducimus dolores minima neque. In doloribus vero
+            minima doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus illo
+            itaque?</div>
+        <div class=" border border-gray-500 rounded-lg bg-white row-span-3  p-3">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut at accusamus quae reprehenderit itaque quis sequi deserunt cum nemo est explicabo,
+            animi quasi magni ducimus architecto veniam libero illum unde assumenda dolorum nam. Ut aperiam culpa earum
+            voluptatibus asperiores qui omnis aspernatur blanditiis, ducimus dolores minima neque. In doloribus vero
+            minima doloremque. hiLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus illo
+            itaque?</div>
+    </div>
+    <!-- <h2 class="font-bold">if you want gap at first place</h2>
+        <div class="grid grid-cols-4 grid-rows-2 bg-slate-400 gap-3 mt-5">
+            <div class=" border border-gray-500 rounded-lg bg-white row-span-2 row-start-2" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus illo itaque?</div>
+            <div class=" border border-gray-500 rounded-lg bg-white col-start-2 col-end-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus illo itaque?</div>
+            <div class=" border border-gray-500 rounded-lg bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus illo itaque?</div>
+            <div class=" border border-gray-500 rounded-lg bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus illo itaque?</div>
+            <div class=" border border-gray-500 rounded-lg bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus illo itaque?</div>
+            <div class=" border border-gray-500 rounded-lg bg-white">hiLorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt voluptatibus illo itaque?</div>
+            </div> -->
+
+    <div class="grid grid-cols-8 grid-rows-4 gap-2 bg-slate-600 p-5">
+        <div class="bg-red-600 p-4 rounded-lg text-white items-center border-2 border-black  col-span-2 row-span-4">1 Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt dolorem vitae similique magnam ab illo commodi rem distinctio
+            molestiae itaque unde sint consectetur reprehenderit consequatur aspernatur incidunt eligendi, ex,
+            voluptatum eos. Obcaecati sequi dolore reprehenderit rerum quos repellendus quidem quo ducimus commodi
+            mollitia vitae placeat totam explicabo laborum, aliquam odio. Amet, recusandae?</div>
+        <div class="bg-red-600 p-4 rounded-lg text-white items-center border-2 border-black col-span-4 row-span-2">2 Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Nesciunt dolorem vitae similique magnam ab illo commodi rem
+            distinctio molestiae itaque unde sint consectetur reprehenderit consequatur aspernatur incidunt eligendi,
+            ex, voluptatum eos. Obcaecati sequi dolore reprehenderit rerum quos repellendus quidem quo ducimus commodi
+            mollitia vitae placeat totam explicabo laborum, aliquam odio. Amet, recusandae?</div>
+        <div class="bg-red-600 p-4 rounded-lg text-white items-center border-2 border-black col-span-2 row-span-2">3 Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt dolorem vitae similique magnam ab illo commodi rem distinctio
+            molestiae itaque unde sint consectetur reprehenderit consequatur aspernatur incidunt eligendi, ex,
+            voluptatum eos. Obcaecati sequi dolore reprehenderit rerum quos repellendus quidem quo ducimus commodi
+            mollitia vitae placeat totam explicabo laborum, aliquam odio. Amet, recusandae?</div>
+        <div class="bg-red-600 p-4 rounded-lg text-white items-center border-2 border-black col-span-2 row-span-2">4 Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt dolorem vitae similique magnam ab illo commodi rem distinctio
+            molestiae itaque unde sint consectetur reprehenderit consequatur aspernatur incidunt eligendi, ex,
+            voluptatum eos. Obcaecati sequi dolore reprehenderit rerum quos repellendus quidem quo ducimus commodi
+            mollitia vitae placeat totam explicabo laborum, aliquam odio. Amet, recusandae?</div>
+        <div class="bg-red-600 p-4 rounded-lg text-white items-center border-2 border-black col-span-2 row-span-2">5 Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt dolorem vitae similique magnam ab illo commodi rem distinctio
+            molestiae itaque unde sint consectetur reprehenderit consequatur aspernatur incidunt eligendi, ex,
+            voluptatum eos. Obcaecati sequi dolore reprehenderit rerum quos repellendus quidem quo ducimus commodi
+            mollitia vitae placeat totam explicabo laborum, aliquam odio. Amet, recusandae?</div>
+        <div class="bg-red-600 p-4 rounded-lg text-white items-center border-2 border-black col-span-2  row-span-2">6 Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt dolorem vitae similique magnam ab illo commodi rem distinctio
+            molestiae itaque unde sint consectetur reprehenderit consequatur aspernatur incidunt eligendi, ex,
+            voluptatum eos. Obcaecati sequi dolore reprehenderit rerum quos repellendus quidem quo ducimus commodi
+            mollitia vitae placeat totam explicabo laborum, aliquam odio. Amet, recusandae?</div>
+    </div>
+</body>
+
+</html>
